@@ -27,3 +27,9 @@ Hello world!
 ```
 
 To exit the QEMU system, press Ctrl + A and then X.
+
+## Licenses
+
+This project source code is available under MIT license. See [LICENSE](LICENSE).
+
+Please refer to the individual licenses for more details on the permissions and restrictions imposed by each library.
