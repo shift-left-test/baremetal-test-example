@@ -40,6 +40,10 @@ You may find more information about baremetal application and testing on QEMU fr
 - https://github.com/winksaville/baremetal-hi
 - https://github.com/ahcbb6/baremetal-helloqemu
 
+You may find more information about the ARM GNU toolchain from the following link.
+
+- https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+
 ## Licenses
 
 This project source code is available under MIT license. See [LICENSE](LICENSE).

@@ -26,9 +26,9 @@ set(CMAKE_RANLIB ${CROSS_COMPILE}ranlib)
 set(CMAKE_OBJCOPY ${CROSS_COMPILE}objcopy)
 
 set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -mcpu=arm926ej-s")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mcpu=arm926ej-s")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mcpu=arm926ej-s --specs=nano.specs")
 
-set(CMAKE_C_LINK_EXECUTABLE "<CMAKE_LINKER> -Map <TARGET>.map -T ${CMAKE_SOURCE_DIR}/ldscripts/arm.ld <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>")
+set(CMAKE_C_LINK_EXECUTABLE "<CMAKE_LINKER> -nostdlib -Map <TARGET>.map -T ${CMAKE_SOURCE_DIR}/ldscripts/arm.ld <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>")
 
 # Add the source directory
 add_subdirectory(src)

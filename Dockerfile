@@ -5,17 +5,16 @@ FROM ubuntu:20.04 AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+COPY resources/ /tmp/
+
 RUN apt-get clean
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
-    g++-multilib-arm-linux-gnueabi \
-    gcc-arm-none-eabi \
-    gcc-multilib-arm-linux-gnueabi \
-    libstdc++-arm-none-eabi-newlib \
     qemu-system-arm \
     tzdata
+RUN tar -xjf /tmp/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 -C /usr --strip=1
 
 FROM ubuntu:20.04
 
