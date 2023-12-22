@@ -14,7 +14,7 @@ Once the Docker image is created, you can run a new Docker container with the cu
 
 ## How to build and run
 
-You can build and run the baremetal application on QEMU using the following command:
+You can build and run the baremetal application on QEMU inside the container using the following command:
 
     $ cd /test
     $ cmake .
