@@ -189,3 +189,5 @@ tags
 *.elf
 objs
 *_nonulls.txt
+resources/
+wget-log*
