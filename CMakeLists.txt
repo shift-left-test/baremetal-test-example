@@ -31,6 +31,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mcpu=arm926ej-s --specs=nano.specs")
 set(CMAKE_C_LINK_EXECUTABLE "<CMAKE_LINKER> -nostdlib -Map <TARGET>.map -T ${CMAKE_SOURCE_DIR}/ldscripts/arm.ld <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>")
 
 # Add external libraries
+add_subdirectory(external/Unity)
 add_subdirectory(external/embedded-gcov)
 
 # Add the source directory

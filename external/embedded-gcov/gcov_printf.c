@@ -39,8 +39,8 @@
 #include <stdio.h>
 
 // #define write_bytes(fd, buf, n) putchar((int)(*(buf)))
-extern void putchar_uart0(const char* s);
-#define write_bytes(fd, buf, n) putchar_uart0((buf))
+extern void putchar_uart0(const char ch);
+#define write_bytes(fd, buf, n) putchar_uart0((*buf))
 
 /***********************************************************************
  * The following functions support gcov_printf and are not meant to be

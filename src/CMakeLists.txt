@@ -4,9 +4,9 @@
 # This provides a convenient way to ensure that the startup code is correctly located in the linker script without manual path modification
 add_library(crt0 startup_arm.s)
 
-add_executable(program main.c)
+add_executable(program main.c print.c)
 target_compile_options(program PRIVATE --coverage)
-target_link_libraries(program crt0 embedded-gcov)
+target_link_libraries(program crt0 embedded-gcov Unity)
 
 # Create binary file using objcopy
 add_custom_command(

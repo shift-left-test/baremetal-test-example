@@ -1,24 +1,30 @@
 #include <gcov_public.h>
+#include <unity.h>
+#include "print.h"
 
-/* QEMU versatile machine memory map */
-volatile unsigned int * const UART0DR = (unsigned int *)0x101f1000;
-
-/* Put each character on UART0 */
-void putchar_uart0(const char* s) {
-  *UART0DR = (unsigned int)(*s);
+void setUp() {
 }
 
-/* Put characters on UART0 */
-void print_uart0(const char* s) {
-  while(*s != '\0') {
-    putchar_uart0(s);
-    s++;
-  }
+void tearDown() {
+}
+
+int add(int x, int y) {
+  return x + y;
+}
+
+void test_add() {
+  TEST_ASSERT_EQUAL(3, add(1, 2));
 }
 
 /* Entry function from startup_arm.s */
 void main() {
   __gcov_call_constructors();
+
   print_uart0("Hello world!\n");
+
+  UNITY_BEGIN();
+  RUN_TEST(test_add);
+  UNITY_END();
+
   __gcov_exit();
 }
