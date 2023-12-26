@@ -26,6 +26,16 @@ Then, you will see the following output on screen:
 Hello world!
 ```
 
+## How to create gcda files
+
+After running the program, you need to copy the lines starting from 'Emitting' and ending with 'Gcov End' on the screen to create a file
+Then, convert the file to gcda files by the following command:
+
+    $ cd external/embedded-gcov/scripts
+    $ gcov_convert.sh <path to file>
+
+## How to exit the QEMU emulator
+
 To exit the QEMU system, press Ctrl + A and then X.
 
 ## References

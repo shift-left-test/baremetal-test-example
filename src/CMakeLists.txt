@@ -5,7 +5,8 @@
 add_library(crt0 startup_arm.s)
 
 add_executable(program main.c)
-target_link_libraries(program crt0)
+target_compile_options(program PRIVATE --coverage)
+target_link_libraries(program crt0 embedded-gcov)
 
 # Create binary file using objcopy
 add_custom_command(

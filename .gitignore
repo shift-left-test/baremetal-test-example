@@ -187,3 +187,5 @@ tags
 
 *.bin
 *.elf
+objs
+*_nonulls.txt
