@@ -5,6 +5,9 @@ FROM ubuntu:20.04 AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN echo "dash dash/sh boolean false" | debconf-set-selections
+RUN dpkg-reconfigure dash
+
 COPY resources/ /tmp/
 
 RUN apt-get clean
@@ -22,4 +25,4 @@ COPY --from=builder /usr /usr
 
 ENV TZ=Asia/Seoul
 
-CMD ["bin/bash"]
+CMD ["/bin/bash"]
