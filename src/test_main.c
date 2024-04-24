@@ -17,7 +17,7 @@ void test_add() {
 }
 
 /* Entry function from startup_arm.s */
-void main() {
+void entry() {
   __gcov_call_constructors();
 
   print_uart0("Hello world!\n");
