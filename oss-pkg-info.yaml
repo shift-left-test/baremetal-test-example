@@ -1,0 +1,9 @@
+Open Source Software Package:
+- name: embedded-gcov
+  source: https://github.com/nasa-jpl/embedded-gcov
+  license : Apache-2.0
+  copyright : Copyright 2021 California Institute of Technology ("Caltech")
+- name: Unity
+  source: https://github.com/ThrowTheSwitch/Unity
+  license: MIT
+  copyright: Copyright (c) <year> 2007-23 Mike Karlesky, Mark VanderVoord, Greg Williams
