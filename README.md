@@ -38,6 +38,12 @@ Then, convert the file to gcda files by the following command:
     $ cd external/embedded-gcov/scripts
     $ ./gcov_convert.sh <path to file>
 
+## How to measure code coverage
+
+You can use well-known code coverage program, such as gcov, lcov, gcovr, etc, to measure the code coverage after generating gcda files.
+
+    $ gcovr .
+
 ## How to exit the QEMU emulator
 
 To exit the QEMU system, press Ctrl + A and then X.
