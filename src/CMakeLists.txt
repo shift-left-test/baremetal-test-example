@@ -5,7 +5,7 @@
 add_library(crt0 startup_arm.s)
 
 add_executable(unittest test_main.c print.c)
-target_compile_options(unittest PRIVATE --coverage)
+target_compile_options(unittest PRIVATE --coverage -O0)
 target_link_libraries(unittest crt0 embedded-gcov Unity)
 
 # Create binary file using objcopy
